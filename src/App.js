@@ -1,4 +1,5 @@
 import CartItem from './CartItem'
+import './index.css'; 
 
 function App() {
   return (
