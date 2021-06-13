@@ -19,8 +19,11 @@ jobs:
         run: npm ci
 
       - name: React Build 
+        run:  npm run build
+      - name: Convert from build to docs folder
         run: |
-          npm run build
+          mkdir docs
+          mv ./build/* ./docs
+          rm -rf build
           ls -a
-          mv build docs --verbose
-          ls -a
+          ls ./docs -a
