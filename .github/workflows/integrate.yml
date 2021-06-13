@@ -21,4 +21,5 @@ jobs:
       - name: React Build 
         run: |
           npm run build
+          echo I am running OOOOOOO
           mv build docs
