@@ -2,7 +2,6 @@ import Cart from "./Cart"
 import Navbar from "./Navbar"
 import React from "react"
 import firebase from "firebase"
-import { data } from "cheerio/lib/api/attributes"
 
 class App extends React.Component {
 	constructor() {
