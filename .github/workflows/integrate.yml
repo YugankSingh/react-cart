@@ -27,7 +27,6 @@ jobs:
           rm -rf build
           ls -a
           ls ./docs -a
-          - name: Upload a Build Artifact
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.3
