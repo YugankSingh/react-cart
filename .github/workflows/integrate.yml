@@ -22,4 +22,5 @@ jobs:
         run: |
           npm run build
           ls -a
-          mv build docs
+          mv build docs --verbose
+          ls -a
