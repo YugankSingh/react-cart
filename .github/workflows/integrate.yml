@@ -18,6 +18,9 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
+      - name: Download Modules
+        run: npm ci
+
       - name: React Build
         run: npm run build
 
