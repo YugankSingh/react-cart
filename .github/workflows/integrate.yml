@@ -18,8 +18,7 @@ jobs:
       - name: Download Modules
         run: npm ci
 
-      - name: React Build
-        run: npm run build
-
-      - name: rename build folder to docs
-        run: mv build docs
+      - name: React Build 
+        run: |
+          npm run build
+          mv build docs
