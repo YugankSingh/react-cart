@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
         
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
@@ -28,8 +30,19 @@ jobs:
           ls -a
           ls ./docs -a
 
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v2.2.3
+      # - name: Upload a Build Artifact
+      #   uses: actions/upload-artifact@v2.2.3
+      #   with:
+      #     name: artifact
+      #     path: './docs'
+
+      - name: Commit files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Add changes" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          name: artifact
-          path: './docs'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
