@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/react-cart/static/css/main.d2467703.chunk.css",
-    "main.js": "/react-cart/static/js/main.6bbe4d36.chunk.js",
-    "main.js.map": "/react-cart/static/js/main.6bbe4d36.chunk.js.map",
+    "main.js": "/react-cart/static/js/main.848a9baf.chunk.js",
+    "main.js.map": "/react-cart/static/js/main.848a9baf.chunk.js.map",
     "runtime-main.js": "/react-cart/static/js/runtime-main.30337e0a.js",
     "runtime-main.js.map": "/react-cart/static/js/runtime-main.30337e0a.js.map",
-    "static/js/2.a539ade6.chunk.js": "/react-cart/static/js/2.a539ade6.chunk.js",
-    "static/js/2.a539ade6.chunk.js.map": "/react-cart/static/js/2.a539ade6.chunk.js.map",
+    "static/js/2.d56abed5.chunk.js": "/react-cart/static/js/2.d56abed5.chunk.js",
+    "static/js/2.d56abed5.chunk.js.map": "/react-cart/static/js/2.d56abed5.chunk.js.map",
     "index.html": "/react-cart/index.html",
     "static/css/main.d2467703.chunk.css.map": "/react-cart/static/css/main.d2467703.chunk.css.map",
-    "static/js/2.a539ade6.chunk.js.LICENSE.txt": "/react-cart/static/js/2.a539ade6.chunk.js.LICENSE.txt"
+    "static/js/2.d56abed5.chunk.js.LICENSE.txt": "/react-cart/static/js/2.d56abed5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.30337e0a.js",
-    "static/js/2.a539ade6.chunk.js",
+    "static/js/2.d56abed5.chunk.js",
     "static/css/main.d2467703.chunk.css",
-    "static/js/main.6bbe4d36.chunk.js"
+    "static/js/main.848a9baf.chunk.js"
   ]
 }
