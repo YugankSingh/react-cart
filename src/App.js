@@ -240,7 +240,7 @@ class App extends React.Component {
 		return (
 			<div className="App">
 				<Navbar productCount={this.getCartProductsCount()} />
-				<button onClick={this.addProduct} style={{ padding: 20, fontSize: 20 }}>
+				<button onClick={this.addProduct} style={{ padding: 20, fontSize: 20, margin:10, backgroundColor: 'rgb(255, 255, 58)' }}>
 					Add Random Product
 				</button>
 
