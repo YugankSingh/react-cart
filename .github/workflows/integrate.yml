@@ -28,10 +28,9 @@ jobs:
       - name: React Build 
         run:  npm run build
         env:
-          CI: true
           REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
           REACT_APP_PIXABAY_API_KEY: ${{ secrets.REACT_APP_PIXABAY_API_KEY }}
-          REACT_APP_TEST: 'TESTING_bayb'
+          REACT_APP_TEST: 'TESTING'
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.3
