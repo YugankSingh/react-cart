@@ -204,7 +204,7 @@ class App extends React.Component {
 		)
 		let data = await res.json()
 		let productName = data.product_name.trim()
-		productName = productName.substring(productName.lastIndexOf(" "))
+		productName = productName.substring(productName.lastIndexOf(" ")).trim()
 		let url = `https://pixabay.com/api/?key=${
 			process.env.REACT_APP_PIXABAY_API_KEY
 		}&q=${encodeURI(productName)}`
