@@ -9,10 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      CI: true
-      REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
-      REACT_APP_PIXABAY_API_KEY: ${{ secrets.REACT_APP_PIXABAY_API_KEY }}
     steps:
       - uses: actions/checkout@v2
         
@@ -22,22 +18,13 @@ jobs:
       - name: Download Modules
         run: npm ci
 
-      - name: Make envfile
-        uses: SpicyPizza/create-envfile@v1
-        with:
-          REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
-          REACT_APP_PIXABAY_API_KEY: ${{ secrets.REACT_APP_PIXABAY_API_KEY }}
-          directory: ./
-          file_name: .env
-      - name: List files 
-        run:  |
-          ls -a
-          cat .env
-          printenv
-
 
       - name: React Build 
         run:  npm run build
+        env:
+          CI: true
+          REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
+          REACT_APP_PIXABAY_API_KEY: ${{ secrets.REACT_APP_PIXABAY_API_KEY }}
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.3
