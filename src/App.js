@@ -24,7 +24,6 @@ class App extends React.Component {
 					return data
 				})
 
-				console.log(products)
 				this.setState({
 					products: products,
 					loading: false,
