@@ -59,6 +59,10 @@ jobs:
           git add .
           git branch -a
           git commit -m "Add changes" -a
-          git push -f build 
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          ref: build
         
    
