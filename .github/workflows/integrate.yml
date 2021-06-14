@@ -8,6 +8,7 @@ on:
   workflow_dispatch:
 jobs:
   build:
+    environment: CI   
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -39,7 +40,7 @@ jobs:
           path: './build'
 
   Push-Changes-to-build-branch:
-    needs: [build]
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
