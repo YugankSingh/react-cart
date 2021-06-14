@@ -9,6 +9,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      CI: true
+      REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
+      REACT_APP_PIXABAY_API_KEY: ${{ secrets.REACT_APP_PIXABAY_API_KEY }}
     steps:
       - uses: actions/checkout@v2
         
@@ -29,6 +33,7 @@ jobs:
         run:  |
           ls -a
           cat .env
+          printenv
 
 
       - name: React Build 
