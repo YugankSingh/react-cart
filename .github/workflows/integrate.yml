@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    environment: CI   
+    environment: build   
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,6 +18,7 @@ jobs:
 
       - name: Download Modules
         run: npm ci
+
       - name: Test
         env:
           TEST_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -53,13 +54,7 @@ jobs:
 
       - name: Display downloaded files
         run: ls -a
-      # - name: Convert from build to docs folder
-      #   run: |
-      #     mkdir docs
-      #     mv ./build/* ./docs
-      #     rm -rf build
-      #     ls -a
-      #     ls ./docs -a
+
       - name: Pull files
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
