@@ -25,6 +25,11 @@ jobs:
           REACT_APP_PIXABAY_API_KEY: ${{ secrets.REACT_APP_PIXABAY_API_KEY }}
           directory: ./
           file_name: .env
+      - name: List files 
+        run:  |
+          ls -a
+          cat .env
+
 
       - name: React Build 
         run:  npm run build
