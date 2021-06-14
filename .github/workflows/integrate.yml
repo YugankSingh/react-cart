@@ -30,7 +30,7 @@ jobs:
         env:
           REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
           REACT_APP_PIXABAY_API_KEY: ${{ secrets.REACT_APP_PIXABAY_API_KEY }}
-          REACT_APP_TEST: 'TESTING'
+          REACT_APP_TEST: 'TESTIG'
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.3
