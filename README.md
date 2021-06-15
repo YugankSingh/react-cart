@@ -12,4 +12,7 @@ Realtime Cart using Firestore and React
 - Sharing data between siblings
 - Using Firebase' Firestore to do realtime CRUD operations
 - Using Github Actions to automate the build and deployting it on github pages
+	- Passing Secrets from enironment
+	- Sharing Data between jobs using artifacts
+	- pushing changes to other branch for deployment
 - Using github secrets
